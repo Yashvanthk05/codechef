@@ -13,7 +13,7 @@ const RandomImages = () => {
     async function fetchRandomImages() {
       setLoading(true);
       try {
-        const response = await fetch(`https://api.unsplash.com/photos/random?count=10`, {
+        const response = await fetch(`https://api.unsplash.com/photos/random?count=16`, {
           headers: {
             'Authorization': `Client-ID VjmowD9h0zZJIaAuXryy7wJLwI6ZusFlkD8teNQDRZE`
           }
