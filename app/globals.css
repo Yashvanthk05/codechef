@@ -2,32 +2,260 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(20px);
+  border-radius: 0px 0px 15px 15px;
+}
+.loginbtn{
+  display: flex;
+  border: 1px solid rgb(42 103 177);
+  padding: 6px 10px;
+  gap: 5px;
+  align-items: center;
+  border-radius: 6px;
+  color: rgb(42 103 177);
+  transition: all 200ms ease;
+}
+.loginbtn:hover{
+  color:white;
+  background-color: rgb(42 103 177);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+#home{
+  padding-top:150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  min-height: 100dvh;
+  background:linear-gradient(180deg,rgb(255, 255, 255,0),rgb(219, 235, 255));
+}
+.homecon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
+@media (min-width:800px){
+  .homecon{
+    justify-content: space-evenly;
+    flex-direction: row;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.searchbar{
+  display: flex;
+  padding: 10px;
+  border: 1px solid rgb(42 103 177);
+  border-radius: 25px;
+  backdrop-filter: blur(6px);
+}
+.searchbar *{
+  color: rgb(42 103 177);
+  background-color: transparent;
+}
+.searchbar input{
+  padding: 0px 2px;
+  outline: none;
+  color: black;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.lgnbtn{
+  display: flex;
+  color: white;
+  background-color: rgb(42 103 177);
+  padding: 10px;
+  margin: -10px;
+  border-radius: 25px;
+  gap: 5px;
+}
+
+#chat{
+  min-height: 100dvh;
+  background:linear-gradient(0deg,rgb(255, 255, 255,0),rgb(219, 235, 255));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.homesocials{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.homesoc{
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 25px;
+  background-color: black;
+  color: white;
+}
+.chatbox{
+  background:linear-gradient(135deg,rgb(42,103,177,0),rgb(42,103,177,0.2));
+  min-height: 70dvh;
+  min-width: 60vw;
+  border-radius: 30px;
+  border: 1px rgb(42,103,177,0.5) solid;
+  position: relative;
+}
+.chatboxhead{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  padding: 15px;
+  gap: 5px;
+  border-radius: 30px 30px 10px 10px;
+  background-color:rgb(42,103,177,0.2);
+}
+.messagesender{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  left: 0;
+  margin: 10px;
+  gap: 5px;
+  bottom: 0;
+  
+}
+.chatboxcon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.messagesender input{
+  background:rgb(42,103,177,0.2);
+  border-radius: 25px;
+  padding:5px 10px;
+  border: 1px rgb(42,103,177,0.3) solid;
+  flex: 1;
+}
+.sendbtn{
+  background-color: rgb(75, 156, 255);
+  padding: 6px;
+  border-radius: 25px;
+  display: flex;
+}
+#login{
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background:linear-gradient(180deg,rgb(255, 255, 255,0),rgb(219, 235, 255));
+}
+#login form input{
+  position: relative;
+  background-color:rgb(75, 156, 255,0.15);
+  border: 1px rgb(75, 156, 255) solid;
+  border-radius: 30px;
+  height: 40px;
+}
+#login form label{
+  position: relative;
+  bottom: -32px;
+  left: 10px;
+}
+#login form input:focus #login>form>label{
+  bottom: -20px;
+}
+
+.images{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.image{
+  border-radius: 10px;
+}
+.sentmess{
+  background-color: rgb(75, 156, 255);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  margin-right: auto;
+  left: 25px;
+  max-width: 250px;
+}
+
+.loginpage{
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.logincontainer{
+  background:linear-gradient(135deg,rgb(255, 255, 255,0),rgb(219, 235, 255));
+  border: 1px rgb(75, 156, 255,0.2) solid;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.input{
+  display: flex;
+  background-color: rgb(75, 156, 255,0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+.input input{
+  outline: none;
+  padding-left: 5px;
+  background-color: transparent;
+}
+#docs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100dvh;
+  gap: 15px;
+}
+.docterminal{
+  background-color: rgb(75, 156, 255);
+  min-height: 60dvh;
+  min-width: 60%;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dochead{
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  font-size: 18;
+  color: rgb(190, 226, 255);
+  justify-content: space-between;
+}
+.ourmess{
+  background-color: rgb(0, 229, 0);
+  padding: 10px;
+  position: relative;
+  margin-left: auto;
+  right: 25px;
+  max-width: 250px;
+  border-radius: 10px;
 }
