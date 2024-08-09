@@ -104,7 +104,7 @@
 .chatbox{
   background:linear-gradient(135deg,rgb(42,103,177,0),rgb(42,103,177,0.2));
   min-height: 70dvh;
-  min-width: 68vw;
+  min-width: 72vw;
   border-radius: 30px;
   border: 1px rgb(42,103,177,0.5) solid;
   position: relative;
